@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="55bd977c7b4946788ada4b74df25d88f" Name="Diagram1">
+        <EntityTypeShape EntityType="PointSaleModel.Bill" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.BillDetail" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Brand" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Category" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Client" Width="1.5" PointX="1.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Employee" Width="1.5" PointX="1.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Products" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.ProductsCategoryBrand" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.ProductSuppliers" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Suppliers" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Users" Width="1.5" PointX="5.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.Warehouse" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PointSaleModel.WarehouseProducts" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="PointSaleModel.FK_Bill_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_Bill_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_BillDetail_Bill" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_BillDetail_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_ProductsCategoryBrand_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_ProductsCategoryBrand_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_ProductsCategoryBrand_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_ProductSuppliers_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_WarehouseProducts_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_ProductSuppliers_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="PointSaleModel.FK_WarehouseProducts_Warehouse" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

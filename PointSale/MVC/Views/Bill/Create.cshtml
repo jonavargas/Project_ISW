@@ -1,0 +1,100 @@
+﻿@model Data.Bill
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Bill</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tax)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tax)
+            @Html.ValidationMessageFor(model => model.Tax)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Discount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Discount)
+            @Html.ValidationMessageFor(model => model.Discount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PaymentType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PaymentType)
+            @Html.ValidationMessageFor(model => model.PaymentType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.State)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.State)
+            @Html.ValidationMessageFor(model => model.State)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SubTotal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SubTotal)
+            @Html.ValidationMessageFor(model => model.SubTotal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Total)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Total)
+            @Html.ValidationMessageFor(model => model.Total)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Employee, "Employee1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Employee", String.Empty)
+            @Html.ValidationMessageFor(model => model.Employee)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Client, "Client1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Client", String.Empty)
+            @Html.ValidationMessageFor(model => model.Client)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,36 @@
+﻿@model Data.ProductsCategoryBrand
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProductsCategoryBrand</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Products.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Products.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Brand1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Brand1.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

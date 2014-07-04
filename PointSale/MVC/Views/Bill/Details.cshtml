@@ -1,0 +1,78 @@
+﻿@model Data.Bill
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Bill</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Discount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Discount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PaymentType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PaymentType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.State)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SubTotal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SubTotal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Total)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Total)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Employee1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Employee1.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Client1.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Client1.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

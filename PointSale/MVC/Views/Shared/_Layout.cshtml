@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - Library Paper Illusions</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Styles.Render("~/Content/css/index.css")
+        @Styles.Render("~/Content/css/bootstrap.css")
+        @Styles.Render("~/Content/css/bootstrap.min.css")
+        @Styles.Render("~/Content/css/bootstrap-theme.min.css")
+
+    </head>
+    <body>
+       
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("Library", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <div class="prod">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Products
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" />@Html.ActionLink("Products", "Index", "Products")</li>
+                                    <li>@Html.ActionLink("Category", "Index", "Category")</li>
+                                    <li>@Html.ActionLink("Brand", "Index", "Brand")</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="supli">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Suppliers
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" /> @Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                                    <li>@Html.ActionLink("Search Supliers", "Index", "SearchSuppliers")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="client">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Client
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" /> @Html.ActionLink("Client", "Index", "Client")</li>
+                                    <li>@Html.ActionLink("Search Client", "Index", "SearchClient")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="emplo">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Employee
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" /> @Html.ActionLink("Employee", "Index", "Employee")</li>
+                                    <li>@Html.ActionLink("Search Employee", "Index", "SearchEmployee")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bill">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Bill
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" /> @Html.ActionLink("Bill", "Index", "Bill")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="warehouse">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Warehouse
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" /> @Html.ActionLink("Warehouse Products", "Index", "WarehouseProducts")</li>
+                                    <li>@Html.ActionLink("Search Products", "Index", "SearchProducts")</li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="warehouse">
+                            <div class="btn-group">
+                                <button type="button" class="btn-custom" data-toggle="dropdown">
+                                    Login
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" />@Html.ActionLink("Login", "Login", "Users")</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+
+                </div>
+            </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/Scripts/bootstrap.min.js")
+        @RenderSection("scripts", required: false)
+
+        
+
+    </body>
+</html>

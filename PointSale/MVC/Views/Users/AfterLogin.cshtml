@@ -1,0 +1,18 @@
+﻿@model Data.Users
+
+@{
+    ViewBag.Title = "Maintenance";
+}
+
+<h1>Welcome to the maintenance of your website</h1>
+
+@if (Session["LogedUserNickname"]!=null)
+{
+   <text> 
+         Hello @Session["LogedUserNickname"].ToString();
+
+  </text>
+       
+        
+    
+}

@@ -1,0 +1,54 @@
+﻿@model Data.WarehouseProducts
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>WarehouseProducts</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.QtyAvailable)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.QtyAvailable)
+            @Html.ValidationMessageFor(model => model.QtyAvailable)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Warehouse, "Warehouse1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Warehouse", String.Empty)
+            @Html.ValidationMessageFor(model => model.Warehouse)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Product, "Products")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Product", String.Empty)
+            @Html.ValidationMessageFor(model => model.Product)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
