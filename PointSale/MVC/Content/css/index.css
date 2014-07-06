@@ -765,31 +765,38 @@ tr.pager td {
     ----------------------------------------------------------*/
 
 
-.prod{
-    margin-top:8%;
-    margin-left:-350%;
-}
-.supli{
-    margin-top:-24%;
-    margin-left:-285%;
+
+.bill{
+    margin-top:-39%;
+    margin-left:-573%;
 }
 .client{
-    margin-top:-24.5%;
-    margin-left:-218%;
+    margin-top:-39%;
+    margin-left:-517%;
 }
 .emplo{
-    margin-top:-24.5%;
-    margin-left:-165%;
+    margin-top:-39%;
+    margin-left:-443%;
 }
-.bill{
-    margin-top:-24.5%;
-    margin-left:-94%;
+.prod{
+    margin-top:8%;
+    margin-left:-343%;
 }
-.warehouse{
-    margin-top:-24.5%;
-    margin-left:-50%;
+.supli{
+    margin-top:-39%;
+    margin-left:-250%;
+}
 
+.warehouse{
+    margin-top:-38%;
+    margin-left:-155%;
 }
+
+.login{
+    margin-top:-39%;
+    margin-left:-47%;
+}
+
 .btn-custom {
     background-color: hsl(195, 99%, 62%) !important;
     background-repeat: repeat-x;
